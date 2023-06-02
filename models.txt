@@ -1,0 +1,18 @@
+models
+
+course{
+	id
+	credit
+	name
+	code
+	category
+	link
+}
+
+user{
+	id
+	name
+	gmail
+	password
+	role
+}
