@@ -8,11 +8,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+      {/* <Main /> */}
         <Routes>
-          {/* <Main /> */}
-          <Route path="/programcore" element={<Main />} />
-
-          <Route path="/" element={<Login />} />
+          <Route path="*" element={<Main />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>

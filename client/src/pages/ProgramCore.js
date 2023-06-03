@@ -1,6 +1,6 @@
 import { Box, Grid, styled } from "@mui/material";
 import Dabba from "../component/Dabba";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Right = styled(Grid)`
@@ -16,32 +16,37 @@ const GridItem = styled(Grid)`
 `;
 
 const Program = () => {
-  useEffect(() => {
-    getallcourse();
-  }, []);
-
-  
-  var courses;
+  const [courses, setCourses] = useState([]);
 
   const getallcourse = async () => {
     try {
-      courses = await axios.get(
+      let courses = await axios.get(
         "http://localhost:5000/getcourses/?cate=programcore"
       );
-      console.log(courses.data.courses);
+      setCourses(courses.data.courses);
     } catch (error) {
       console.log(error.message);
     }
   };
 
-  // console.log(courses);
+  useEffect(() => {
+    getallcourse();
+  }, []);
 
   return (
     <div>
       <Right>
-        <GridItem item lg={6} md={6} xs={12}>
-          <Dabba />
-        </GridItem>
+        {courses !== [] ? (
+          courses.map((data) => {
+            return (
+              <GridItem item lg={6} md={6} xs={12}>
+                <Dabba data={data}/>
+              </GridItem>
+            );
+          })
+        ) : (
+          <div> Empty </div>
+        )}
       </Right>
     </div>
   );

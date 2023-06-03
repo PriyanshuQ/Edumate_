@@ -16,19 +16,19 @@ const Boxstyle = styled(Card)`
   margin-bottom: 10px;
 `
 
-const Dabba = () => {
+const Dabba = ({data}) => {
   return (
     <>
       <Boxstyle variant="outlined">
         <CardContent>
           <Typography>
-            Name: Introduction To Aerospace Engineering
+            {data.name}
           </Typography>
           <Typography >
-            Course_Code: ASE1001
+          {data.code}
           </Typography>
           <Typography>
-            Credit: 3
+          {data.credit}
           </Typography>
         </CardContent>
         <CardActions>

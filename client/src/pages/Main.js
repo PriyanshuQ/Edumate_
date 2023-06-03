@@ -53,7 +53,7 @@ const Main = () => {
         <Right>
           <Grid item lg={6} md={6} xs={12}>
             <Routes>
-              <Route path="/" element={<ProgramCore />} />
+              <Route path="/programcore" element={<ProgramCore />} />
               <Route path="/prorgamelective" element={<ProrgamElective />} />
               <Route path="/naturalscience" element={<NaturalScience />} />
               <Route path="/openelective" element={<OpenElective />} />
