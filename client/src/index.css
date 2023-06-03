@@ -111,11 +111,13 @@ p{
 
 .authentication{
   height: 100vh;
+  background-size: cover;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://vitbhopal.ac.in/file/2020/02/Academic-Block-VIT-Bhopal-2-scaled-e1580792952114.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #005555;
-  background-image: url(https://vitbhopal.ac.in/file/2020/02/Academic-Block-VIT-Bhopal-2-scaled-e1580792952114.jpg);
+  /* background-image: url(https://vitbhopal.ac.in/file/2020/02/Academic-Block-VIT-Bhopal-2-scaled-e1580792952114.jpg); */
 }
 .authentication-from{
   width: 400px;
