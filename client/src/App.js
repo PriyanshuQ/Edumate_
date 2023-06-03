@@ -10,9 +10,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Main /> */}
-          <Route path="/" element={<Main />} />
+          <Route path="/programcore" element={<Main />} />
 
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>

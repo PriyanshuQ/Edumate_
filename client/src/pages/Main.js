@@ -36,7 +36,7 @@ const Main = () => {
       <Container>
         <Left>
           <Ml>
-            <Link to={"/"} style={{textDecoration: 'none', color: "inherit"}}>
+            <Link to={"/programcore"} style={{textDecoration: 'none', color: "inherit"}}>
               <Mi>Program Core</Mi>
             </Link>
             <Link to={"/prorgamelective"} style={{textDecoration: 'none', color: "inherit"}}>
