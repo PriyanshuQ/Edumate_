@@ -21,20 +21,18 @@ const Dabba = () => {
     <>
       <Boxstyle variant="outlined">
         <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.primary" gutterBottom>
-            Word of the Day
+          <Typography>
+            Name: Introduction To Aerospace Engineering
           </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.primary">
-            adjective
+          <Typography >
+            Course_Code: ASE1001
           </Typography>
-          <Typography variant="body2">
-            well meaning and kindly.
-            <br />
-            {'"a benevolent smile"'}
+          <Typography>
+            Credit: 3
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Download</Button>
         </CardActions>
       </Boxstyle>
     </>
