@@ -1,6 +1,9 @@
 import { Box, styled, MenuItem, MenuList, Grid } from "@mui/material";
-import Dabba from "../component/Dabba";
-
+import { Routes, Route, Link } from "react-router-dom";
+import ProgramCore from "./ProgramCore";
+import ProrgamElective from "./ProrgamElective";
+import OpenElective from "./OpenElective";
+import NaturalScience from "./NaturalScience";
 const Container = styled(Box)`
   display: flex;
   min-height: 100vh;
@@ -13,24 +16,19 @@ const Left = styled(Box)`
   flex: 1;
   padding: 10px 10px;
 `;
-
 const Right = styled(Grid)`
   background: #ecf8f9;
   color: #e55807;
   flex: 4;
   padding: 10px 10px;
-  display: flex;
-  justify-content: space-evenly;
 `;
 
-const Ml = styled(MenuList)`
-  
-`
+const Ml = styled(MenuList)``;
 
 const Mi = styled(MenuItem)`
   font-weight: 700;
   margin-bottom: 30px;
-`
+`;
 
 const Main = () => {
   return (
@@ -38,48 +36,28 @@ const Main = () => {
       <Container>
         <Left>
           <Ml>
-            <Mi>Program Core</Mi>
-            <Mi>Program Elective</Mi>
+            <Link to={"/"} style={{textDecoration: 'none', color: "inherit"}}>
+              <Mi>Program Core</Mi>
+            </Link>
+            <Link to={"/prorgamelective"} style={{textDecoration: 'none', color: "inherit"}}>
+              <Mi>Program Elective</Mi>
+            </Link>
+            <Link to={"/naturalscience"} style={{textDecoration: 'none', color: "inherit"}}>
             <Mi>Natural Science, Humanities and Management</Mi>
+            </Link>
+            <Link to={"/openelective"} style={{textDecoration: 'none', color: "inherit"}}>
             <Mi>Open Elective</Mi>
+            </Link>
           </Ml>
         </Left>
-        <Right container>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
-          </Grid>
-          <Grid item lg={6} md ={6} xs={12}>
-            <Box><Dabba /></Box>
+        <Right>
+          <Grid item lg={6} md={6} xs={12}>
+            <Routes>
+              <Route path="/" element={<ProgramCore />} />
+              <Route path="/prorgamelective" element={<ProrgamElective />} />
+              <Route path="/naturalscience" element={<NaturalScience />} />
+              <Route path="/openelective" element={<OpenElective />} />
+            </Routes>
           </Grid>
         </Right>
       </Container>

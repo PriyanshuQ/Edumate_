@@ -10,7 +10,7 @@ import {
 import styled from "@emotion/styled";
 
 const Boxstyle = styled(Card)`
-  width: 350px;
+  width: 300px;
   background: #ffffff;
   margin: auto;
   margin-bottom: 10px;
