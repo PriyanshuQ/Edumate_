@@ -52,13 +52,13 @@ const Dabba = ({ data }) => {
           </Box>
         </CardContent>
         <CA>
-          <Button size="small">
-            <a href={data.syllabus_link} target="_blank">
+          <Button size="small" variant="contained">
+            <a href={data.syllabus_link} target="_blank" style={{color:"#ffffff" , textDecoration:"none"}}>
               Syllabus
             </a>
           </Button>
-          <Button size="small">
-            <a href={data.data_link} target="_blank">
+          <Button size="small" variant="contained">
+            <a href={data.data_link} target="_blank" style={{color:"#ffffff" , textDecoration:"none"}}>
               Download
             </a>
           </Button>
