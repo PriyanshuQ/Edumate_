@@ -27,11 +27,16 @@ const CTH = styled(Typography)`
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 5px;
-`
+`;
 
 const CD = styled(Typography)`
   font-size: 14px;
 `;
+
+const CA = styled(CardActions)`
+  display: flex;
+  justify-content: space-between;
+`
 
 const Dabba = ({ data }) => {
   return (
@@ -46,9 +51,18 @@ const Dabba = ({ data }) => {
             <CD>Course Credit : {data.credit}</CD>
           </Box>
         </CardContent>
-        <CardActions>
-          <Button size="small">Download</Button>
-        </CardActions>
+        <CA>
+          <Button size="small" variant="contained">
+            <a href={data.syllabus_link} target="_blank" style={{color:"#ffffff" , textDecoration:"none"}}>
+              Syllabus
+            </a>
+          </Button>
+          <Button size="small" variant="contained">
+            <a href={data.data_link} target="_blank" style={{color:"#ffffff" , textDecoration:"none"}}>
+              Download
+            </a>
+          </Button>
+        </CA>
       </Boxstyle>
     </>
   );

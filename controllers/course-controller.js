@@ -16,14 +16,15 @@ exports.getAllCourses = async (req, res) => {
 // add Course
 exports.addCourse = async (req, res) => {
 
-    const { category, code, credit, name, link } = req.body;
+    const { category, code, credit, name, data_link , syllabus_link } = req.body;
 
     const course = await Course.create({
         category,
         code,
         credit,
         name,
-        link,
+        data_link, 
+        syllabus_link,
       });
 
       res.status(201).json({
