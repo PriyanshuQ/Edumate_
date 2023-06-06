@@ -15,7 +15,7 @@ function App() {
         <Routes>
           {/* <Route path="*" element={<Main />} /> */}
           <Route
-            path="/"
+            path="*"
             element={
               <ProtectedRoute>
                 <Main />
