@@ -48,6 +48,9 @@ const Main = () => {
             <Link to={"/openelective"} style={{textDecoration: 'none', color: "inherit"}}>
             <Mi>Open Elective</Mi>
             </Link>
+            <Link to={"/logout"} style={{textDecoration: 'none', color: "inherit"}}>
+            <Mi>Log Out</Mi>
+            </Link>
           </Ml>
         </Left>
         <Right>
