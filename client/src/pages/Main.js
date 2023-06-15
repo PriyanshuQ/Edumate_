@@ -21,6 +21,9 @@ const Right = styled(Grid)`
   color: #e55807;
   flex: 4;
   padding: 10px 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100vh;
 `;
 
 const Ml = styled(MenuList)``;
@@ -34,22 +37,37 @@ const Main = () => {
   return (
     <>
       <Container>
-        <Left >
+        <Left>
           <Ml>
-            <Link to={"/programcore"} style={{textDecoration: 'none', color: "inherit"}}>
+            <Link
+              to={"/programcore"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
               <Mi>Program Core</Mi>
             </Link>
-            <Link to={"/prorgamelective"} style={{textDecoration: 'none', color: "inherit"}}>
+            <Link
+              to={"/prorgamelective"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
               <Mi>Program Elective</Mi>
             </Link>
-            <Link to={"/naturalscience"} style={{textDecoration: 'none', color: "inherit"}}>
-            <Mi>Natural Science, Humanities and Management</Mi>
+            <Link
+              to={"/naturalscience"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Mi>Natural Science, Humanities and Management</Mi>
             </Link>
-            <Link to={"/openelective"} style={{textDecoration: 'none', color: "inherit"}}>
-            <Mi>Open Elective</Mi>
+            <Link
+              to={"/openelective"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Mi>Open Elective</Mi>
             </Link>
-            <Link to={"/logout"} style={{textDecoration: 'none', color: "inherit"}}>
-            <Mi>Log Out</Mi>
+            <Link
+              to={"/logout"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Mi>Log Out</Mi>
             </Link>
           </Ml>
         </Left>
