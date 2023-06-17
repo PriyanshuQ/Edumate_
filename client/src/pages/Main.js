@@ -1,5 +1,5 @@
 import { Box, styled, MenuItem, MenuList, Grid } from "@mui/material";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import ProgramCore from "./ProgramCore";
 import ProrgamElective from "./ProrgamElective";
 import OpenElective from "./OpenElective";
@@ -32,6 +32,7 @@ const Mi = styled(MenuItem)`
   font-weight: 700;
   margin-bottom: 30px;
 `;
+const navigate = useNavigate();
 
 const Main = () => {
   return (
@@ -63,12 +64,17 @@ const Main = () => {
             >
               <Mi>Open Elective</Mi>
             </Link>
-            <Link
+            <div onClick={()=> {
+              localStorage.clear();
+              Navigate("/login");
+            }}>
+              <Link
               to={"/logout"}
               style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <Mi>Log Out</Mi>
-            </Link>
+              >
+                <Mi>Log Out</Mi>
+              </Link>
+            </div>
           </Ml>
         </Left>
         <Right>
