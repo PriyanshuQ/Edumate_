@@ -32,9 +32,9 @@ const Mi = styled(MenuItem)`
   font-weight: 700;
   margin-bottom: 30px;
 `;
-const navigate = useNavigate();
 
 const Main = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Container>
