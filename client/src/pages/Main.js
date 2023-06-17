@@ -66,7 +66,7 @@ const Main = () => {
             </Link>
             <div onClick={()=> {
               localStorage.clear();
-              Navigate("/login");
+              navigate("/login");
             }}>
               <Link
               to={"/logout"}
