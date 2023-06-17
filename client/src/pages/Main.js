@@ -64,13 +64,15 @@ const Main = () => {
             >
               <Mi>Open Elective</Mi>
             </Link>
-            <div onClick={()=> {
-              localStorage.clear();
-              navigate("/login");
-            }}>
+            <div
+              onClick={() => {
+                localStorage.clear();
+                navigate("/login");
+              }}
+            >
               <Link
-              to={"/logout"}
-              style={{ textDecoration: "none", color: "inherit" }}
+                to={"/logout"}
+                style={{ textDecoration: "none", color: "inherit" }}
               >
                 <Mi>Log Out</Mi>
               </Link>
