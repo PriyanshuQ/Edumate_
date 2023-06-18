@@ -4,6 +4,8 @@ import ProgramCore from "./ProgramCore";
 import ProrgamElective from "./ProrgamElective";
 import OpenElective from "./OpenElective";
 import NaturalScience from "./NaturalScience";
+import GeneralChat from "./GeneralChat";
+
 const Container = styled(Box)`
   display: flex;
   min-height: 100vh;
@@ -64,6 +66,12 @@ const Main = () => {
             >
               <Mi>Open Elective</Mi>
             </Link>
+            <Link
+              to={"/generalchat"}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Mi>General Discussion</Mi>
+            </Link>
             <div
               onClick={() => {
                 localStorage.clear();
@@ -86,6 +94,7 @@ const Main = () => {
               <Route path="/prorgamelective" element={<ProrgamElective />} />
               <Route path="/naturalscience" element={<NaturalScience />} />
               <Route path="/openelective" element={<OpenElective />} />
+              <Route path="/generalchat" element={<GeneralChat />} />
             </Routes>
           </Grid>
         </Right>
