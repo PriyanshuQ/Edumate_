@@ -19,10 +19,10 @@ const Left = styled(Box)`
   padding: 10px 10px;
 `;
 const Right = styled(Grid)`
-  background: #ecf8f9;
+  background: #C38154;
   color: #e55807;
   flex: 4;
-  padding: 10px 10px;
+  padding: 25px 25px;
   overflow: scroll;
   overflow-x: hidden;
   height: 100vh;

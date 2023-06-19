@@ -14,7 +14,7 @@ const Boxstyle = styled(Card)`
   height: 225px;
   background: #ffffff;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   objectfit: "fill";
 `;
 

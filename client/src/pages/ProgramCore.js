@@ -4,15 +4,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Right = styled(Grid)`
-  background: #ecf8f9;
   color: #e55807;
   padding: 10px 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const GridItem = styled(Grid)`
   margin-right: 10px;
+  background: #C38154;
 `;
 
 const Program = () => {
